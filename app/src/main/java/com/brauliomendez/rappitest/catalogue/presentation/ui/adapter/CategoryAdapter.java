@@ -9,6 +9,8 @@ import com.brauliomendez.rappitest.catalogue.presentation.ui.viewholder.Category
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 import mx.leo.easyrecycler.adapter.EasyAdapter;
 
 /**
@@ -23,6 +25,6 @@ public class CategoryAdapter extends EasyAdapter<CategoryViewHolder, Entry>{
     }
 
     @Override public void onBindItemViewHolder(CategoryViewHolder holder, Entry entry, int i) {
-        holder.setItem(entry);
+            holder.setItem(entry);
     }
 }
