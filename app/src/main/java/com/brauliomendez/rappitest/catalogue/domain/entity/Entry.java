@@ -1,5 +1,6 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -12,81 +13,147 @@ import java.util.List;
 public class Entry {
 
     @SerializedName("im:name")
-    public NameEntry imName;
+    @Expose
+    private ImName imName;
 
     @SerializedName("im:image")
-    public List<ImageEntry> imImage = new ArrayList<>();
+    @Expose
+    private List<ImImage> imImage = null;
 
-    public Summary summary;
+    @SerializedName("summary")
+    @Expose
+    private Summary summary;
 
     @SerializedName("im:price")
-    public PriceEntry imPrice;
+    @Expose
+    private ImPrice imPrice;
 
     @SerializedName("im:contentType")
-    public ContentTypeEntry imContentType;
+    @Expose
+    private ImContentType imContentType;
 
-    public Rights rights;
+    @SerializedName("rights")
+    @Expose
+    private Rights rights;
 
-    public Title title;
+    @SerializedName("title")
+    @Expose
+    private Title title;
 
-    public LinkEntry link;
+    @SerializedName("link")
+    @Expose
+    private Link link;
 
-    public IdEntry id;
+    @SerializedName("id")
+    @Expose
+    private Id id;
 
     @SerializedName("im:artist")
-    public ArtistEntry imArtist;
+    @Expose
+    private ImArtist imArtist;
 
-    public CategoryEntry category;
+    @SerializedName("category")
+    @Expose
+    private Category category;
 
     @SerializedName("im:releaseDate")
-    public ReleaseDateEntry imReleaseDate;
+    @Expose
+    private ImReleaseDate imReleaseDate;
 
-
-    public NameEntry getImName() {
+    public ImName getImName() {
         return imName;
     }
 
-    public List<ImageEntry> getImImage() {
+    public void setImName(ImName imName) {
+        this.imName = imName;
+    }
+
+    public List<ImImage> getImImage() {
         return imImage;
+    }
+
+    public void setImImage(List<ImImage> imImage) {
+        this.imImage = imImage;
     }
 
     public Summary getSummary() {
         return summary;
     }
 
-    public PriceEntry getImPrice() {
+    public void setSummary(Summary summary) {
+        this.summary = summary;
+    }
+
+    public ImPrice getImPrice() {
         return imPrice;
     }
 
-    public ContentTypeEntry getImContentType() {
+    public void setImPrice(ImPrice imPrice) {
+        this.imPrice = imPrice;
+    }
+
+    public ImContentType getImContentType() {
         return imContentType;
+    }
+
+    public void setImContentType(ImContentType imContentType) {
+        this.imContentType = imContentType;
     }
 
     public Rights getRights() {
         return rights;
     }
 
+    public void setRights(Rights rights) {
+        this.rights = rights;
+    }
+
     public Title getTitle() {
         return title;
     }
 
-    public LinkEntry getLink() {
+    public void setTitle(Title title) {
+        this.title = title;
+    }
+
+    public Link getLink() {
         return link;
     }
 
-    public IdEntry getId() {
+    public void setLink(Link link) {
+        this.link = link;
+    }
+
+    public Id getId() {
         return id;
     }
 
-    public ArtistEntry getImArtist() {
+    public void setId(Id id) {
+        this.id = id;
+    }
+
+    public ImArtist getImArtist() {
         return imArtist;
     }
 
-    public CategoryEntry getCategory() {
+    public void setImArtist(ImArtist imArtist) {
+        this.imArtist = imArtist;
+    }
+
+    public Category getCategory() {
         return category;
     }
 
-    public ReleaseDateEntry getImReleaseDate() {
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public ImReleaseDate getImReleaseDate() {
         return imReleaseDate;
     }
+
+    public void setImReleaseDate(ImReleaseDate imReleaseDate) {
+        this.imReleaseDate = imReleaseDate;
+    }
+
 }

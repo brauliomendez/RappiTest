@@ -1,5 +1,6 @@
 package com.brauliomendez.rappitest.catalogue.data;
 
+import com.brauliomendez.rappitest.catalogue.domain.entity.FeedResponse;
 import com.brauliomendez.rappitest.client.RappiTestService;
 import com.brauliomendez.rappitest.catalogue.domain.entity.Feed;
 import com.brauliomendez.rappitest.catalogue.domain.repository.RappiRequestRepository;
@@ -15,7 +16,12 @@ public class RappiRequestRepositoryImp implements RappiRequestRepository {
 
     private RappiTestService rappiTestService;
 
-    @Override public Observable<Feed> getDataCatalogue() {
-        return rappiTestService.getInfoRequest().subscribeOn(Schedulers.newThread());
+
+    public RappiRequestRepositoryImp(RappiTestService rappiTestService) {
+        this.rappiTestService = rappiTestService;
+    }
+
+    @Override public Observable<FeedResponse> getDataCatalogue() {
+        return rappiTestService.getInfoRequest();
     }
 }

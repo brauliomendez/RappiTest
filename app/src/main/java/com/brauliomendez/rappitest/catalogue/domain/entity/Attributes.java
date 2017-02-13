@@ -7,17 +7,18 @@ import com.google.gson.annotations.SerializedName;
  * Created by BraulioMendez on 2/12/17.
  */
 
-public class Name {
+public class Attributes {
 
-    @SerializedName("label")
+    @SerializedName("height")
     @Expose
-    private String label;
+    private String height;
 
-    public String getLabel() {
-        return label;
+    public String getHeight() {
+        return height;
     }
 
-    public void setLabel(String label) {
-        this.label = label;
+    public void setHeight(String height) {
+        this.height = height;
     }
+
 }
