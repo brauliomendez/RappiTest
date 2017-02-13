@@ -28,6 +28,6 @@ public class CategoryViewHolder extends EasyViewHolder {
 
     public void setItem(Entry entry) {
         Glide.with(logoImageView.getContext()).load(entry.getImImage().get(2).getLabel()).into(logoImageView);
-        categoryTextView.setText(entry.getCategory().getAttributes().getLabel());
+        categoryTextView.setText(entry.getImName().getLabel());
     }
 }

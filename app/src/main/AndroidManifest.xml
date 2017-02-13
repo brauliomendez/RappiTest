@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".catalogue.presentation.ui.activity.CategoryActivity"/>
+        <activity android:name=".catalogue.presentation.ui.activity.MenuActivity"/>
     </application>
 
 </manifest>

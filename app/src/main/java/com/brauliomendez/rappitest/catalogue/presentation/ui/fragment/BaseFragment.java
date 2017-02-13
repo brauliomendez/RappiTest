@@ -27,17 +27,16 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by BraulioMendez on 2/12/17.
+ * Created by BraulioMendez on 2/13/17.
  */
 
-public class MusicFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
 
-    @BindView(R.id.base_recycler_view)
-    RecyclerView recyclerView;
+    @BindView(R.id.base_recycler_view) RecyclerView recyclerView;
 
     private static CategoryAdapter categoryAdapter = new CategoryAdapter();
 
-    private CategoryRappiCatalogueView categoryRappiCatalogueView = new CategoryRappiCatalogueView() {
+    public CategoryRappiCatalogueView categoryRappiCatalogueView = new CategoryRappiCatalogueView() {
         @Override public void showItems(List<Entry> entries) {
             categoryAdapter.addItems((ArrayList<Entry>) entries);
         }
@@ -48,7 +47,7 @@ public class MusicFragment extends Fragment {
     };
 
     @Nullable @Override public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-                                                 @Nullable Bundle savedInstanceState) {
+                             @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_base, container, false);
         ButterKnife.bind(this, view);
         return view;
@@ -65,13 +64,5 @@ public class MusicFragment extends Fragment {
         recyclerView.setAdapter(categoryAdapter);
     }
 
-    private void setUpCleanArquitecture() {
-        RappiTestService rappiTestService = RappiTestClient.getInstance();
-        RappiRequestRepository rappiRequestRepository = new RappiRequestRepositoryImp(rappiTestService);
-        RappiCatalogueUseCase rappiCatalogueUseCase = new RappiCatalogueUseCase(rappiRequestRepository);
-        CategoryRappiCataloguePresenter presenter = new CategoryRappiCataloguePresenter(rappiCatalogueUseCase,
-                categoryRappiCatalogueView);
-        presenter.getCategoriesRappiCatalogue("Music");
-    }
+    public abstract void setUpCleanArquitecture();
 }
-
