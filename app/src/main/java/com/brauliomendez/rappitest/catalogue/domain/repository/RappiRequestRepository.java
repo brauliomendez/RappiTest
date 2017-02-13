@@ -1,6 +1,7 @@
 package com.brauliomendez.rappitest.catalogue.domain.repository;
 
 import com.brauliomendez.rappitest.catalogue.domain.entity.Feed;
+import com.brauliomendez.rappitest.catalogue.domain.entity.FeedResponse;
 
 import io.reactivex.Observable;
 
@@ -10,5 +11,5 @@ import io.reactivex.Observable;
 
 public interface RappiRequestRepository {
 
-    Observable<Feed> getDataCatalogue();
+    Observable<FeedResponse> getDataCatalogue();
 }

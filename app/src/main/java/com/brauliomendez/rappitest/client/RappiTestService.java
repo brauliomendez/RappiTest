@@ -1,6 +1,7 @@
 package com.brauliomendez.rappitest.client;
 
 import com.brauliomendez.rappitest.catalogue.domain.entity.Feed;
+import com.brauliomendez.rappitest.catalogue.domain.entity.FeedResponse;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
@@ -11,5 +12,5 @@ import retrofit2.http.GET;
 
 public interface RappiTestService {
 
-    @GET(RappiTestConstants.SERVICES_INFO_ENDPOINT) Observable<Feed> getInfoRequest();
+    @GET(RappiTestConstants.SERVICES_INFO_ENDPOINT) Observable<FeedResponse> getInfoRequest();
 }

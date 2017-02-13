@@ -1,6 +1,7 @@
 package com.brauliomendez.rappitest.catalogue.domain.usecase;
 
 import com.brauliomendez.rappitest.catalogue.domain.entity.Feed;
+import com.brauliomendez.rappitest.catalogue.domain.entity.FeedResponse;
 import com.brauliomendez.rappitest.catalogue.domain.repository.RappiRequestRepository;
 
 import io.reactivex.Observable;
@@ -17,7 +18,7 @@ public class RappiCatalogueUseCase {
         this.rappiRequestRepository = rappiRequestRepository;
     }
 
-    public Observable<Feed> buildCatalogue() {
+    public Observable<FeedResponse> buildCatalogue() {
         return rappiRequestRepository.getDataCatalogue();
     }
 }
