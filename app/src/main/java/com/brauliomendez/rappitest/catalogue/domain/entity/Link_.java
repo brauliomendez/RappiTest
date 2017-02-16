@@ -1,23 +1,20 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/12/17.
  */
 
-public class Link_ {
+public class Link_ extends RealmObject {
 
-    @SerializedName("attributes")
-    @Expose
-    private Attributes________ attributes;
+    private Link_Attribute attributes;
 
-    public Attributes________ getAttributes() {
+    public Link_Attribute getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(Attributes________ attributes) {
+    public void setAttributes(Link_Attribute attributes) {
         this.attributes = attributes;
     }
 

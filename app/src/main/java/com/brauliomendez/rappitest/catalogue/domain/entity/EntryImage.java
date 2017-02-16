@@ -1,21 +1,16 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/12/17.
  */
 
-public class ImImage {
+public class EntryImage extends RealmObject {
 
-    @SerializedName("label")
-    @Expose
     private String label;
 
-    @SerializedName("attributes")
-    @Expose
-    private Attributes attributes;
+    private EntryImageAttribute attributes;
 
     public String getLabel() {
         return label;
@@ -25,11 +20,11 @@ public class ImImage {
         this.label = label;
     }
 
-    public Attributes getAttributes() {
+    public EntryImageAttribute getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(Attributes attributes) {
+    public void setAttributes(EntryImageAttribute attributes) {
         this.attributes = attributes;
     }
 

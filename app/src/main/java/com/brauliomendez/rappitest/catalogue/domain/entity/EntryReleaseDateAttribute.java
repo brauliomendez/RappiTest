@@ -6,7 +6,7 @@ import io.realm.RealmObject;
  * Created by BraulioMendez on 2/12/17.
  */
 
-public class Name extends RealmObject {
+public class EntryReleaseDateAttribute extends RealmObject {
 
     private String label;
 

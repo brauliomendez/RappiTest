@@ -10,7 +10,11 @@ import java.util.List;
 
 public interface CategoryRappiCatalogueView {
 
-    void showItems(List<Entry> entries);
+    void showItems(List<Entry> categoryEntry);
 
     void onCategoryRappiCatalogueError(String message);
+
+    void showProgressBar();
+
+    void hideProgressBar();
 }

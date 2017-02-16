@@ -1,47 +1,28 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-import java.util.ArrayList;
-import java.util.List;
+import io.realm.RealmList;
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/11/17.
  */
 
-public class Feed {
+public class Feed extends RealmObject {
 
-    @SerializedName("author")
-    @Expose
     private Author author;
 
-    @SerializedName("entry")
-    @Expose
-    private List<Entry> entry = new ArrayList<>();
+    private RealmList<Entry> entry = new RealmList<>();
 
-    @SerializedName("updated")
-    @Expose
     private Updated updated;
 
-    @SerializedName("rights")
-    @Expose
     private Rights_ rights;
 
-    @SerializedName("title")
-    @Expose
     private Title_ title;
 
-    @SerializedName("icon")
-    @Expose
     private Icon icon;
 
-    @SerializedName("link")
-    @Expose
-    private List<Link_> link = null;
+    private RealmList<Link_> link = new RealmList<>();
 
-    @SerializedName("id")
-    @Expose
     private Id_ id;
 
     public Author getAuthor() {
@@ -50,14 +31,6 @@ public class Feed {
 
     public void setAuthor(Author author) {
         this.author = author;
-    }
-
-    public List<Entry> getEntry() {
-        return entry;
-    }
-
-    public void setEntry(List<Entry> entry) {
-        this.entry = entry;
     }
 
     public Updated getUpdated() {
@@ -92,19 +65,27 @@ public class Feed {
         this.icon = icon;
     }
 
-    public List<Link_> getLink() {
-        return link;
-    }
-
-    public void setLink(List<Link_> link) {
-        this.link = link;
-    }
-
     public Id_ getId() {
         return id;
     }
 
     public void setId(Id_ id) {
         this.id = id;
+    }
+
+    public RealmList<Entry> getEntry() {
+        return entry;
+    }
+
+    public void setEntry(RealmList<Entry> entry) {
+        this.entry = entry;
+    }
+
+    public RealmList<Link_> getLink() {
+        return link;
+    }
+
+    public void setLink(RealmList<Link_> link) {
+        this.link = link;
     }
 }

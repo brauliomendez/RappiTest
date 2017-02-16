@@ -1,17 +1,20 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.SerializedName;
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/12/17.
  */
 
-public class FeedResponse {
+public class FeedResponse extends RealmObject {
 
-    @SerializedName("feed")
     Feed feed;
 
     public Feed getFeed() {
         return feed;
+    }
+
+    public void setFeed(Feed feed) {
+        this.feed = feed;
     }
 }
