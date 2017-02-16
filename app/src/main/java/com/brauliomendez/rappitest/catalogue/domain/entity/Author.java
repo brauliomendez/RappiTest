@@ -1,21 +1,16 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/11/17.
  */
 
 
-public class Author {
+public class Author extends RealmObject {
 
-    @SerializedName("name")
-    @Expose
     private Name name;
 
-    @SerializedName("uri")
-    @Expose
     private Uri uri;
 
     public Name getName() {

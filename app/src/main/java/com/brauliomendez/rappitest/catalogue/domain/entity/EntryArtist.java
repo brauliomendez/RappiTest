@@ -1,22 +1,16 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/12/17.
  */
 
-public class ImPrice {
+public class EntryArtist extends RealmObject {
 
-
-    @SerializedName("label")
-    @Expose
     private String label;
 
-    @SerializedName("attributes")
-    @Expose
-    private Attributes_ attributes;
+    private EntryArtistAttribute attributes;
 
     public String getLabel() {
         return label;
@@ -26,11 +20,12 @@ public class ImPrice {
         this.label = label;
     }
 
-    public Attributes_ getAttributes() {
+    public EntryArtistAttribute getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(Attributes_ attributes) {
+    public void setAttributes(EntryArtistAttribute attributes) {
         this.attributes = attributes;
     }
+
 }

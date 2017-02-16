@@ -1,28 +1,22 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/12/17.
  */
 
-public class Attributes______ {
+public class CategoryAttribute extends RealmObject {
 
     @SerializedName("im:id")
-    @Expose
     private String imId;
 
-    @SerializedName("term")
-    @Expose
     private String term;
 
-    @SerializedName("scheme")
-    @Expose
     private String scheme;
 
-    @SerializedName("label")
-    @Expose
     private String label;
 
     public String getImId() {

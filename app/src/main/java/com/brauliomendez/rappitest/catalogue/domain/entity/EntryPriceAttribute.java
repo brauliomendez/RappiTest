@@ -1,20 +1,15 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/12/17.
  */
 
-public class Attributes_ {
+public class EntryPriceAttribute extends RealmObject {
 
-    @SerializedName("amount")
-    @Expose
     private String amount;
 
-    @SerializedName("currency")
-    @Expose
     private String currency;
 
     public String getAmount() {

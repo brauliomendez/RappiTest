@@ -1,6 +1,5 @@
 package com.brauliomendez.rappitest.catalogue.domain.repository;
 
-import com.brauliomendez.rappitest.catalogue.domain.entity.Feed;
 import com.brauliomendez.rappitest.catalogue.domain.entity.FeedResponse;
 
 import io.reactivex.Observable;

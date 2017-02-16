@@ -1,16 +1,13 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/12/17.
  */
 
-public class Attributes_____ {
+public class EntryArtistAttribute extends RealmObject {
 
-    @SerializedName("href")
-    @Expose
     private String href;
 
     public String getHref() {

@@ -1,78 +1,59 @@
 package com.brauliomendez.rappitest.catalogue.domain.entity;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-import java.util.List;
+import io.realm.RealmList;
+import io.realm.RealmObject;
 
 /**
  * Created by BraulioMendez on 2/11/17.
  */
 
-public class Entry {
+public class Entry extends RealmObject {
 
     @SerializedName("im:name")
-    @Expose
-    private ImName imName;
+    private EntryName imName;
 
     @SerializedName("im:image")
-    @Expose
-    private List<ImImage> imImage = null;
+    private RealmList<EntryImage> imImage = new RealmList<>();
 
-    @SerializedName("summary")
-    @Expose
     private Summary summary;
 
     @SerializedName("im:price")
-    @Expose
-    private ImPrice imPrice;
+    private EntryPrice imPrice;
 
     @SerializedName("im:contentType")
-    @Expose
-    private ImContentType imContentType;
+    private EntryContentType imContentType;
 
-    @SerializedName("rights")
-    @Expose
     private Rights rights;
 
-    @SerializedName("title")
-    @Expose
     private Title title;
 
-    @SerializedName("link")
-    @Expose
     private Link link;
 
-    @SerializedName("id")
-    @Expose
     private Id id;
 
     @SerializedName("im:artist")
-    @Expose
-    private ImArtist imArtist;
+    private EntryArtist imArtist;
 
-    @SerializedName("category")
-    @Expose
     private Category category;
 
     @SerializedName("im:releaseDate")
-    @Expose
-    private ImReleaseDate imReleaseDate;
+    private EntryReleaseDate imReleaseDate;
 
-    public ImName getImName() {
+    public EntryName getImName() {
         return imName;
     }
 
-    public void setImName(ImName imName) {
+    public void setImName(EntryName imName) {
         this.imName = imName;
     }
 
-    public List<ImImage> getImImage() {
+    public RealmList<EntryImage> getImImage() {
         return imImage;
     }
 
-    public void setImImage(List<ImImage> imImage) {
+    public void setImImage(RealmList<EntryImage> imImage) {
         this.imImage = imImage;
     }
 
@@ -84,19 +65,19 @@ public class Entry {
         this.summary = summary;
     }
 
-    public ImPrice getImPrice() {
+    public EntryPrice getImPrice() {
         return imPrice;
     }
 
-    public void setImPrice(ImPrice imPrice) {
+    public void setImPrice(EntryPrice imPrice) {
         this.imPrice = imPrice;
     }
 
-    public ImContentType getImContentType() {
+    public EntryContentType getImContentType() {
         return imContentType;
     }
 
-    public void setImContentType(ImContentType imContentType) {
+    public void setImContentType(EntryContentType imContentType) {
         this.imContentType = imContentType;
     }
 
@@ -132,11 +113,11 @@ public class Entry {
         this.id = id;
     }
 
-    public ImArtist getImArtist() {
+    public EntryArtist getImArtist() {
         return imArtist;
     }
 
-    public void setImArtist(ImArtist imArtist) {
+    public void setImArtist(EntryArtist imArtist) {
         this.imArtist = imArtist;
     }
 
@@ -148,11 +129,11 @@ public class Entry {
         this.category = category;
     }
 
-    public ImReleaseDate getImReleaseDate() {
+    public EntryReleaseDate getImReleaseDate() {
         return imReleaseDate;
     }
 
-    public void setImReleaseDate(ImReleaseDate imReleaseDate) {
+    public void setImReleaseDate(EntryReleaseDate imReleaseDate) {
         this.imReleaseDate = imReleaseDate;
     }
 
